@@ -1,0 +1,298 @@
+@font-face {
+	font-family: 'Inter-Bold'; 
+	src: url(assets/fonts/static/Inter-Bold.ttf); 
+}
+@font-face {
+	font-family: 'Inter-ExtraBold'; 
+	src: url(assets/fonts/static/Inter-ExtraBold.ttf); 
+}
+@font-face {
+	font-family: 'Inter-Regular'; 
+	src: url(assets/fonts/static/Inter-Regular.ttf); 
+}
+@font-face {
+	font-family: 'Inter-VariableFont_slnt'; 
+	src: url(assets/fonts/Inter-VariableFont_slnt,wght.ttf); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	font-family: 'Inter-Regular'; 
+    background-color: white;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header{
+    padding-top: 90px;
+}
+
+.header_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo img{
+    width: 100%;
+}
+
+.header_menu{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.header_menu li a{
+    text-decoration: none;
+    color: grey;
+    transition: 0.3s;
+}
+
+.header_menu li a:hover{
+    color: black;
+}
+
+.open{
+    display: flex !important;
+}
+
+.burger{
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span{
+    height: 2px;
+    width: 100%;
+    transform: scale(1);
+    background-color: #c5c5c5;
+}
+
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #c5c5c5;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before{
+    top: 0;
+}
+
+.burger::after{
+    bottom: 0;
+}
+
+.futures{
+    padding: 60px 0;
+}
+
+.futures_content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.futures_one{
+    width: 67%;
+}
+
+.futures_img img{
+    width: 100%;
+}
+
+.futures_two{
+    width: 30%;
+}
+
+.futures_one_info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.futures_one_text{
+    width: 50%;
+}
+
+.futures_one_text h1{
+	font-family: 'Inter-ExtraBold'; 
+    letter-spacing: -0.1rem;
+    line-height: 1em;
+    font-size: 64px;
+}
+
+.futures_one_more{
+    width: 45%;
+}
+
+.futures_one_more p{
+    color: grey;
+    margin-bottom: 50px;
+}
+
+.futures_one_more button{
+    background-color: #d6370f;
+    padding: 20px 30px;
+    border: none;
+    cursor: pointer;
+	font-family: 'Inter-Bold'; 
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: white;
+    transition: 0.3s;
+}
+
+.futures_one_more button:hover{
+    letter-spacing: 10px;
+    color: black;
+}
+
+.futures_two{
+    background-color: rgb(12, 2, 26);
+    color: white;
+}
+
+.futures_two_block:last-child{
+    padding-bottom: 10px;
+}
+
+.futures_two div{
+    margin: 20px;
+    border-bottom: 1px solid #c5c5c5;
+    cursor: pointer;
+}
+
+.futures_two div:last-child{
+    border-bottom: none;
+}
+
+.futures_two h2{
+    color: orange;
+    font-size: 36px;
+	font-family: 'Inter-ExtraBold'; 
+    margin: 20px 20px 30px 20px;
+}
+
+.futures_two h3{
+	font-family: 'Inter-ExtraBold'; 
+    font-size: 20px;
+}
+
+.futures_two p{
+    color: #c5c5c5;
+	font-family: 'Inter-Regular'; 
+    margin: 15px 0 30px 0;
+}
+
+.click_bate{
+    margin-bottom: 100px;
+}
+
+.click_bate_content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.click_bate_block{
+    display: flex;
+    justify-content: space-between;
+    max-width: 360px;
+}
+
+.click_bate_logo{
+    margin-right: 25px;
+}
+
+.click_bate_logo img{
+    height: fit-content;
+    max-height: 200px;
+}
+
+.click_bate_info h2{
+    font-family: 'Inter-Bold'; 
+    color: grey;
+    font-size: 36px;
+}
+
+.click_bate_info h4{
+    font-family: 'Inter-ExtraBold'; 
+    margin: 15px 0;
+}
+
+.click_bate_info p{
+    color: grey;
+
+}
+
+@media screen and (max-width: 768px) {
+    .burger{
+        display: flex;
+    }
+    .header_menu{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: black;
+        animation: burgerAnimation 0.4s;
+    }
+    .header_menu li a{
+        font-size: 26px;
+    }
+    .futures_content{
+        display: inline;
+    }
+    .futures_one_info{
+        display: inline;
+    }
+    .futures_one{
+        width: 100%;
+    }
+    .futures_one_text{
+        width: 80%;
+    }
+    .futures_one_text h1{
+        font-size: 48px;
+    }
+    .futures_one_more{
+        width: 100%;
+    }
+    .futures_img img{
+        width: 100%;
+    }
+    .futures_two{
+        width: 100%;
+    }
+    .click_bate_content{
+        justify-content: space-between;
+    }
+    .click_bate_block{
+        max-width: 100%;
+    }
+  }
